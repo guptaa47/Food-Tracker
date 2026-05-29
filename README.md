@@ -1,5 +1,7 @@
 This is a food database and meal nutrient tracker website.
 
+The code utilizes docker containers to allow for identical usage across environments. The frontend uses streamlit for demo purposes.
+
 It is in progress, but has some functionality: mainly an optimized food search and a meal calculator.
 
 Here is an example of the optimized search which works on prefixes of any word in the food name.
