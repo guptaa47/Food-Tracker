@@ -1,0 +1,19 @@
+services:
+  ml:
+    image: aneeshg/ml
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+
+    volumes:
+      - ../src:/workspace/src
+      - ../logs:/workspace/logs
+      - ../outputs:/workspace/outputs
+      - ../data:/workspace/data
+
+    working_dir: /workspace
+    command: python3 src/main.py
